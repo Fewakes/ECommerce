@@ -7,7 +7,10 @@ export default {
         "color-primary": "#087f5b",
       },
       boxShadow: {
-        custom: "0 20px 30px 0 rgba(0, 0, 0, 0.27)",
+        custom: "0 5px 20px 0 rgba(0, 0, 0, 0.25)",
+      },
+      fontFamily: {
+        "ibm-plex": ["IBM Plex Sans", "sans-serif"],
       },
     },
   },

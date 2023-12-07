@@ -27,8 +27,8 @@ export default function Testimonials() {
           className="my-auto max-w-[16rem] rounded-xl"
         />
         <Testimonial
-          quote='"We couldn&apos;t live without these chairs anymore"'
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellat at, nesciunt quia cum minima ipsum culpa totam sapiente recusandae earum debitis doloribus in quasi voluptatibus!"
+          quote="Essential Chairs for Daily Living"
+          text="These chairs have become indispensable in our lives. Their unmatched comfort and timeless design make them a must-have. Highly recommended!"
           author="— Mary and Sarah Johnson"
         />
       </div>

@@ -29,17 +29,17 @@ export default function USPs() {
         <USP
           IconComponent={FaFlask}
           title="Science meets design"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus similique adipisci praesentium."
+          description="Purposeful aesthetic, meticulous craftsmanship redefine living spaces, create lasting impact."
         />
         <USP
           IconComponent={FaRegFaceGrin}
           title="Maximal comfort"
-          description="Reprehenderit optio placeat quasi excepturi architecto, explicabo facilis perspiciatis error maxime magnam."
+          description="Blend functionality, luxury - chairs promise unparalleled comfort, exquisite design."
         />
         <USP
           IconComponent={FaRegHeart}
           title="Ethical and sustainable"
-          description="Deleniti recusandae quidem nesciunt, eos dolorum iure, quaerat omnis est laudantium voluptatem voluptas!"
+          description="Ethical values, sustainability enrich life, contribute to a conscientious world."
         />
       </div>
     </section>
