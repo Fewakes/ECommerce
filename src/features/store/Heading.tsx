@@ -1,13 +1,13 @@
 import React from "react";
-
 import { SlBasket } from "react-icons/sl";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Heading() {
   return (
     <header className="flex items-center justify-between">
-      <p className="font-ibm-plex  text-center text-4xl font-bold text-color-primary">
-        E-COMMERCE.
+      <p className="font-ibm-plex  text-center text-4xl font-bold uppercase text-color-primary">
+        <Link to="/">Ecommerce</Link>
       </p>
       <input
         placeholder="search..."

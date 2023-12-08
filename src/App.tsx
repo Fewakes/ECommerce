@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import MainPage from "./pages/MainPage";
 import StorePage from "./pages/StorePage";
+import Product from "./pages/Product";
 
 export default function App() {
   return (
@@ -11,8 +12,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/store" element={<StorePage />} />
-        <Route path="product" element={null} />
-        <Route path="/product/:id" element={null} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={null} />
         <Route path="/checkout" element={null} />
 
