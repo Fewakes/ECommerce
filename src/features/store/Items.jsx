@@ -4,7 +4,7 @@ import { items } from "../../data/data.js";
 
 export default function Items() {
   return (
-    <div className="flex flex-wrap">
+    <div className=" mt-10 flex  flex-wrap  gap-7 ">
       {items.map((item) => (
         <Item
           id={item.id}
