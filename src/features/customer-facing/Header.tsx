@@ -24,10 +24,9 @@ export default function Header() {
             a positive influence on your well-being.
           </p>
           <div className="flex w-full justify-center lg:inline-block">
-            <Button>
-              {" "}
-              <Link to="/store">Shop Chairs</Link>
-            </Button>
+            <Link to="/store">
+              <Button> Shop Chairs</Button>
+            </Link>
           </div>
         </section>
         <img

@@ -1,7 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { items } from "../data/data.js";
-import Heading from "../features/store/Heading.js";
 
 export default function Product() {
   const { id } = useParams();
@@ -10,7 +9,6 @@ export default function Product() {
 
   return (
     <div className=" mx-auto flex w-full max-w-screen-xl flex-col  md:p-5 lg:p-8">
-      <Heading />
       <section className=" flex h-[85.6vh] flex-grow flex-row items-center justify-center gap-[5rem]">
         <img
           src={`/${product.productPhoto}`}
@@ -24,9 +22,11 @@ export default function Product() {
           </div>
           <div className="text-center">{product.productDescription}</div>
           <div className="flex justify-center">
-            <button className="rounded-lg bg-color-primary px-5 py-2 text-lg text-white">
-              Buy now
-            </button>
+            <Link to="/cart">
+              <button className="rounded-lg bg-color-primary px-5 py-2 text-lg text-white">
+                Buy now
+              </button>
+            </Link>
           </div>
         </div>
       </section>

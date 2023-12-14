@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Heading() {
   return (
-    <header className="flex items-center justify-between">
+    <header className="mx-auto flex w-full max-w-screen-xl items-center justify-between pt-5">
       <p className="font-ibm-plex  text-center text-4xl font-bold uppercase text-color-primary">
         <Link to="/">Ecommerce</Link>
       </p>

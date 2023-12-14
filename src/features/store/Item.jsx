@@ -12,10 +12,10 @@ function Item({ productsPhoto, productName, productPrice, id }) {
           className="h-[10rem] w-[12rem] rounded-md "
         />
       </Link>
-      <div className="font-ibm-plex  text-center font-bold uppercase">
+      <div className="text-center  font-ibm-plex font-bold uppercase">
         {productName}
       </div>
-      <div className="font-ibm-plex text-center text-xs font-bold">
+      <div className="text-center font-ibm-plex text-xs font-bold">
         £{productPrice}.00
       </div>
       <div className="flex justify-center">
