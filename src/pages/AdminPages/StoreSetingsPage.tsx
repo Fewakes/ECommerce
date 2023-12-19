@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function StoreSettings() {
+export default function StoreSettingsPages() {
   return (
     <section>
       <div className="flex justify-center gap-3">

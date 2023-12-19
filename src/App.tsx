@@ -1,17 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import StorePage from "./pages/StorePage";
-import Product from "./pages/Product";
-import AppLayout from "./ui/AppLayouts";
-import Cart from "./features/cart/Cart";
-import AdminAppLayout from "./ui/AdminAppLayouts";
-import LoginPage from "./pages/LoginPage";
-import Dashboard from "./pages/Dashboard";
-import AddProduct from "./pages/AddProduct";
-import RemoveProduct from "./pages/RemoveProduct";
-import StoreSetings from "./pages/StoreSetings";
-import UserSettings from "./pages/UserSettings";
+import MainPage from "./pages/CustomerPages/MainPage";
+import StorePage from "./pages/CustomerPages/StorePage";
+
+import CustomerLayout from "./ui/CustomerLayout";
+
+import AdminLayout from "./ui/AdminLayout";
+import LoginPage from "./pages/AdminPages/LoginPage";
+import DashboardPage from "./pages/AdminPages/DashboardPage";
+import AddProductPage from "./pages/AdminPages/AddProductPage";
+import RemoveProductPage from "./pages/AdminPages/RemoveProductPage";
+import StoreSetingsPage from "./pages/AdminPages/StoreSetingsPage";
+import UserSettingsPage from "./pages/AdminPages/UserSettingsPage";
+import CartPage from "./pages/CustomerPages/CartPage";
 
 export default function App() {
   return (
@@ -19,18 +20,18 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
 
-        <Route element={<AppLayout />}>
+        <Route element={<CustomerLayout />}>
           <Route path="/store" element={<StorePage />} />
-          <Route path="/product/:id" element={<Product />} />
-          <Route path="/cart" element={<Cart />} />
+
+          <Route path="/cart" element={<CartPage />} />
         </Route>
         <Route path="/admin/login" element={<LoginPage />} />
-        <Route element={<AdminAppLayout />}>
-          <Route path="/admin/dashboard" element={<Dashboard />} />
-          <Route path="/admin/addproduct" element={<AddProduct />} />
-          <Route path="/admin/removeproduct" element={<RemoveProduct />} />
-          <Route path="/admin/storesettings" element={<StoreSetings />} />
-          <Route path="/admin/usersettings" element={<UserSettings />} />
+        <Route element={<AdminLayout />}>
+          <Route path="/admin/dashboard" element={<DashboardPage />} />
+          <Route path="/admin/addproduct" element={<AddProductPage />} />
+          <Route path="/admin/removeproduct" element={<RemoveProductPage />} />
+          <Route path="/admin/storesettings" element={<StoreSetingsPage />} />
+          <Route path="/admin/usersettings" element={<UserSettingsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

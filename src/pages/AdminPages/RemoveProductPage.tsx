@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function RemoveProduct() {
+export default function RemoveProductPage() {
   return (
     <section>
       <div className="flex justify-center gap-3">

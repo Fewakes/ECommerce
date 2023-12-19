@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import Select from "react-select";
 import Slider from "@mui/material/Slider";
 import { Box } from "@mui/system";
-import { useLocation } from "react-router-dom";
 
-export default function Sidebar() {
-  const location = useLocation();
+export default function StoreSideBar() {
   const [style, setStyle] = useState(null);
   const [price, setPrice] = useState([0, 100]);
   const [sort, setSort] = useState(null);
@@ -25,10 +23,6 @@ export default function Sidebar() {
   const handleSliderChange = (event, newValue) => {
     setPrice(newValue);
   };
-
-  if (location.pathname !== "/store") {
-    return null;
-  }
 
   return (
     <div className="space-y-4 p-4">
@@ -75,7 +69,7 @@ export default function Sidebar() {
         />
       </Box>
 
-      <label className="block flex items-center text-lg text-white">
+      <label className=" flex items-center text-lg text-white">
         <input
           type="checkbox"
           className="mr-2"

@@ -1,7 +1,7 @@
 import React from "react";
 import { PieChart, Pie, Tooltip, Legend } from "recharts";
 
-export default function Dashboard() {
+export default function DashboardPage() {
   const data = [
     {
       name: "Total Products",

@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 // REMEMBER TO SET CHANGE ON ACTIVE BUTTON
 
-export default function AdminAppLayout() {
+export default function AdminLayout() {
   return (
     <div className="flex h-screen bg-gray-200">
       <div className="flex w-[18rem] flex-col gap-5 border-r bg-color-primary p-4">
