@@ -1,6 +1,7 @@
 import React from "react";
 import { getTotalCartPrice } from "../../Context/CartReducer";
 import { useSelector } from "react-redux";
+import Button from "../../ui/Button";
 
 export default function CartSideBar() {
   const totalCartSum = useSelector(getTotalCartPrice);
@@ -10,7 +11,7 @@ export default function CartSideBar() {
         {" "}
         Please enter your details to proceed with purchase.{" "}
       </h2>
-      <div className="flex flex-col gap-5">
+      <div className="mb-10 flex flex-col gap-5">
         <input
           className="rounded-md border border-gray-300 p-2"
           placeholder="Name on card"
@@ -44,9 +45,7 @@ export default function CartSideBar() {
           />
         </div>
       </div>
-      <button className="mt-10 rounded-3xl bg-white px-10 py-2 font-bold text-color-primary">
-        Pay £{totalCartSum}.00
-      </button>
+      <Button type="secondary"> Pay £ {totalCartSum}.00</Button>
     </section>
   );
 }

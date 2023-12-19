@@ -2,6 +2,7 @@
 import React from "react";
 import { getCurrentQuantityById } from "../../context/CartReducer";
 import { useSelector } from "react-redux";
+import UpdateItemQuantity from "./UpdateItemQuantity";
 
 export default function CartItem({ item }) {
   const { id, productPhoto, productName, productPrice } = item;
@@ -22,7 +23,7 @@ export default function CartItem({ item }) {
           <p>Collection: Orange</p>
         </div>
       </div>
-      <p> {currentQuantity} </p>
+      <UpdateItemQuantity id={id} currentQuantity={currentQuantity} />
       <p>£{currentQuantity * productPrice}.00 </p>
     </div>
   );

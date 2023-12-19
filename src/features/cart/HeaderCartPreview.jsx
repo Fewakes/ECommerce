@@ -33,9 +33,13 @@ function HeaderCartPreview() {
           <HeaderCartPreviewLayout />
         </div>
       )}
-      <div className="absolute right-[-1rem] top-[1rem] flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-3xl bg-black text-white opacity-50">
-        {totalQuantity}
-      </div>
+      {totalQuantity > 0 ? (
+        <div className="absolute right-[-0.7rem] top-[1rem] flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-3xl bg-white text-color-primary opacity-95">
+          {totalQuantity}
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

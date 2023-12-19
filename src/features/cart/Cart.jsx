@@ -8,6 +8,7 @@ import {
   getTotalCartQuantity,
   getTotalCartPrice,
 } from "../../context/CartReducer";
+import Button from "../../ui/Button";
 
 export default function Cart() {
   const cart = useSelector(getCart);
@@ -35,12 +36,9 @@ export default function Cart() {
         Total: £{totalCartSum}.00
       </div>
       <div>
-        <button
-          onClick={() => dispatch(clearCart())}
-          className="mt-[5rem] rounded-3xl bg-color-primary px-5 py-2 text-white"
-        >
-          Clear cart
-        </button>
+        <Button onClick={() => dispatch(clearCart())} type="primary">
+          Clear Cart
+        </Button>
       </div>
     </div>
   );

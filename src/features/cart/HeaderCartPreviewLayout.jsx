@@ -5,6 +5,7 @@ import { getCart } from "../../context/CartReducer";
 import { Link } from "react-router-dom";
 
 import { getTotalCartPrice } from "../../context/CartReducer";
+import Button from "../../ui/Button";
 
 export default function HeaderCartPreviewLayout() {
   const cart = useSelector(getCart);
@@ -21,11 +22,9 @@ export default function HeaderCartPreviewLayout() {
         <div className="pb-5 text-right font-bold">
           Total: £{totalCartSum}.00
         </div>
-        <div className="mt-auto">
+        <div className="flex justify-center">
           <Link to="/cart">
-            <button className="w-full rounded-3xl bg-color-primary px-4 py-2 text-white">
-              Go to cart
-            </button>
+            <Button type="primary">Go to cart</Button>
           </Link>
         </div>
       </div>

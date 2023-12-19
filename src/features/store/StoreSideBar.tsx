@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 import Slider from "@mui/material/Slider";
 import { Box } from "@mui/system";
+import Button from "../../ui/Button";
 
 export default function StoreSideBar() {
   const [style, setStyle] = useState(null);
@@ -78,6 +79,9 @@ export default function StoreSideBar() {
         />
         Discount only
       </label>
+      <Button type="primary">Apply</Button>
+      <Button type="secondary">Apply</Button>
+      <Button type="danger">Apply</Button>
     </div>
   );
 }

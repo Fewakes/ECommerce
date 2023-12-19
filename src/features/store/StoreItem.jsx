@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../context/CartReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, getCurrentQuantityById } from "../../context/CartReducer";
+import Button from "../../ui/Button";
+import UpdateItemQuantity from "../cart/UpdateItemQuantity";
 
 function StoreItem({
   id,
@@ -11,6 +13,10 @@ function StoreItem({
   productDescription,
   productCollection,
 }) {
+  const currentQuantity = useSelector((state) =>
+    getCurrentQuantityById(state, id),
+  );
+
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = (e) => {
@@ -33,6 +39,7 @@ function StoreItem({
       totalPrice: productPrice * 1,
     };
     dispatch(addItem(newItem));
+    setShowModal(false);
   }
 
   return (
@@ -50,12 +57,15 @@ function StoreItem({
         <div className="text-center text-sm font-bold text-gray-500">
           £{productPrice}.00
         </div>
-        <button
-          className="w-[10rem] rounded-xl bg-color-primary py-2 text-sm text-white transition-colors duration-200 hover:bg-color-primary-dark"
-          onClick={handleAddToCart}
-        >
-          Add to Basket
-        </button>
+        <div className="flex">
+          {currentQuantity === 0 ? (
+            <Button type="primary" onClick={handleAddToCart}>
+              Add to basket
+            </Button>
+          ) : (
+            <UpdateItemQuantity id={id} currentQuantity={currentQuantity} />
+          )}
+        </div>
       </div>
 
       {showModal && (
@@ -80,12 +90,11 @@ function StoreItem({
               <div className="flex w-[30rem] flex-col gap-10">
                 <div className="text-3xl">{productName}</div>
                 <div>{productDescription}</div>
-                <button
-                  className="rounded-3xl bg-color-primary px-10 py-3 text-white"
-                  onClick={handleAddToCart}
-                >
-                  Buy now
-                </button>
+                <div className="justify flex text-center">
+                  <Button type="primary" onClick={handleAddToCart}>
+                    Add to cart
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
